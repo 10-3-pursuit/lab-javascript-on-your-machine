@@ -4,7 +4,30 @@
  * Depending on the operation, either add up all of the numbers or subtract all of the numbers, from left to right.
  * @returns {number} The result of either adding all numbers or subtracting all numbers, depending on the arguments added to the command line.
  */
-function calculator() {}
+function calculator() {
+    const newArray = process.argv.slice(2)
+    let total = 0
+    let operation = newArray[0]
+    if(newArray.length === 0) {
+        return'No operation provided...'
+    } else if(newArray.length < 2) {
+        return 'No numbers provided...'
+    }
+    for(i = 1; i < newArray.length; i++) {
+        if(operation === 'plus') {
+            total += +newArray[i]
+        } else if (operation === 'minus') {
+            if(i === 1) {
+                total = newArray[i]
+            } else {
+                total = total - newArray[i]
+            }
+        } else {
+            return `Invalid operation: ${operation}`
+        }
+    }
+    return total
+}
 
 // Don't change anything below this line.
 module.exports = calculator;
