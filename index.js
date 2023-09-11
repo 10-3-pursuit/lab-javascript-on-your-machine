@@ -22,7 +22,6 @@ function calculator() {
       }
     } else if (process.argv[2] === "minus") {
       for (const num of numArr) {
-        //total = parseInt(process.argv.slice(3, 4))
         total -= parseInt(num)
       }
     }
