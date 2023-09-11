@@ -17,7 +17,7 @@ function calculator() {
     }
 
     if (operation !== 'plus' && operation !== 'minus') {
-        return "Invalid operation: modulo"
+        return `Invalid operation: ${operation}`
     }
 
     let total = parseInt(numbers[0])
