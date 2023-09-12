@@ -6,7 +6,7 @@
  */
 function calculator() {
     // My Variables
-    const args = process.argv.slice(2); // Get command line arguments, excluding the first two (node and script name)
+    const args = process.argv.slice(2); 
     const operation = args[0];
     const numbers = args.slice(1).map(Number);
     let result = 0; 
