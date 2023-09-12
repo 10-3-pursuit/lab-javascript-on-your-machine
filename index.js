@@ -18,9 +18,18 @@ function calculator() {
      if (!myArray.includes('plus') && !myArray.includes('minus')) {
          return 'Invalid operation: modulo';
      }
+
+
+     if(myArray.includes('plus')) {
+        for(let num of numArr) {
+            total += +num;
+        }
+    }
+    
+    if(myArray.includes('minus')) {
+        total = numArr.reduce((total, num) => total - num);
+    }
 }
 // Don't change anything below this line.
 module.exports = calculator;
-
-
 
