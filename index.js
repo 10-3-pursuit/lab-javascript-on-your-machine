@@ -6,12 +6,21 @@
  */
 function calculator() {
     let myArray = process.argv.slice(2);
-    let total = 0
+    let total = 0;
     let numArr = myArray.slice(1);
+
+    if(myArray.length === 0) {
+        return `No operation provided...`;
+     } else if(numArr.length === 0) {
+        return `No numbers provided...`;
+     } 
+     
+     if (!myArray.includes('plus') && !myArray.includes('minus')) {
+         return 'Invalid operation: modulo';
+     }
 }
 // Don't change anything below this line.
 module.exports = calculator;
-
 
 
 
