@@ -71,7 +71,7 @@ describe("calculator()", () => {
       const command = "minus";
       const numbers = ["15", "10"];
       process.argv.push(command, ...numbers);
-
+      
       const actual = calculator();
       const expected = 5;
       expect(actual).toEqual(expected);
