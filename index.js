@@ -29,7 +29,11 @@ function calculator() {
     if(myArray.includes('minus')) {
         total = numArr.reduce((total, num) => total - num);
     }
+    return total
 }
+const showMe = calculator();
+console.log(showMe);
+
 // Don't change anything below this line.
 module.exports = calculator;
 
