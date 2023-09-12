@@ -6,7 +6,10 @@
  */
 function calculator() {
     let myArray = process.argv.slice(2);
+    let total = 0
 }
 // Don't change anything below this line.
 module.exports = calculator;
 
+
+    
